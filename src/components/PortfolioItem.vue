@@ -1,7 +1,10 @@
 <template>
   <div class="portfolio-item">
-    <div class="img-container" v-on:click="openFullScreen">
+    <div class="img-container" :class="{ zoom: isShowZoomIn }" v-on:click="openFullScreen" v-on:mouseover="isShowZoomIn = true" v-on:mouseleave="isShowZoomIn = false">
       <img :src="require(`@/assets/images/${data.imgURL}`)" :alt="data.id" />
+      <div class="cover-zoom" v-if="isShowZoomIn">
+        <img src="@/assets/images/icons/zoom-in.png" alt="zoom-in" />
+      </div>
     </div>
     <h4>{{ data.name }}</h4>
   </div>
@@ -12,12 +15,16 @@ export default {
   name: 'PortfolioItem',
   props: ['data'],
   data: () => ({
+    isShowZoomIn: false
   }),
   methods: {
     openFullScreen () {
       this.$emit('open-modal', {
         id: this.data.id
       })
+    },
+    showZoomIn () {
+      console.log('zoom in')
     }
   }
 }
@@ -45,14 +52,40 @@ export default {
 }
 
 .img-container {
+  position: relative;
   width: 100%;
   height: 250px;
   opacity: 0.8;
+  overflow: hidden;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all .3s ease-in-out;
+  }
+
+  .cover-zoom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #00533680;
+
+    img {
+      width: 50px;
+      height: auto;
+    }
+  }
+}
+
+.zoom {
+  img {
+    transform: scale(1.2);
   }
 }
 
