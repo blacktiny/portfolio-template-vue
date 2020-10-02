@@ -53,6 +53,7 @@ export default {
 
 .about {
   position: relative;
+  margin-bottom: 5rem !important;
 }
 
 .about-me {
@@ -89,6 +90,10 @@ export default {
 
 .testimonial {
   margin-top: 200px;
+
+  .section-heading {
+    margin-bottom: 5rem;
+  }
 }
 
 </style>

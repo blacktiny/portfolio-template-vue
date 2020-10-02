@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .content {
   width: 50%;
@@ -84,7 +84,7 @@ export default {
 }
 
 .quote-company {
-  color: #bac964;
+  color: #00bd7a;
 }
 
 </style>
