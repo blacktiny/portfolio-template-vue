@@ -42,6 +42,7 @@ export default {
   top: 0;
   width: 100vw;
   z-index: 9;
+  transition: background .3s linear;
 
   ul {
     display: flex;
@@ -55,9 +56,10 @@ export default {
       color: #4a4a4a;
       padding: 0 2rem;
       cursor: pointer;
+      transition: color .3s linear;
 
       &:hover {
-        color: white;
+        color: #00bd7a;
       }
     }
   }

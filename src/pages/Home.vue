@@ -10,8 +10,8 @@
         <h6>HI THERE! I AM</h6>
         <h3>
           <span>
-            <p class="is-visible">Denis Kali</p>
-            <p class="is-hidden">A Web Developer</p>
+            <p class="is-hidden">Denis Kali</p>
+            <p class="is-visible">A Web Developer</p>
           </span>
         </h3>
       </div>
