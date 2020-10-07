@@ -10,7 +10,7 @@
         <h6>HI THERE! I AM</h6>
         <h3>
           <span>
-            <p class="is-hidden">Denis Kali</p>
+            <p class="is-hidden">Wang Shuang</p>
             <p class="is-visible">A Web Developer</p>
           </span>
         </h3>
@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 h3 {
   position: absolute;

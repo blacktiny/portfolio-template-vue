@@ -16,7 +16,7 @@
 <script>
 import PortfolioItem from '@/components/PortfolioItem.vue'
 import PortfolioModal from '@/components/PortfolioModal.vue'
-import jsonData from '@/helper/data.json'
+import jsonData from '@/helper/data.js'
 
 export default {
   name: 'Portfolio',

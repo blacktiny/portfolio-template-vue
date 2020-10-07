@@ -1,5 +1,5 @@
 <template>
-  <div class="main" v-on:scroll.passive="handleScroll">
+  <div>
     <Header />
     <Home />
     <About />
@@ -28,24 +28,10 @@ export default {
     Contact
   },
   methods: {
-    handleScroll () {
-      var pageContainer = document.querySelector('.main')
-      if (pageContainer.scrollTop >= 50) {
-        console.log('active')
-      } else {
-        console.log('deactive')
-      }
-    }
   }
 }
 </script>
 
 <style>
-
-.main {
-  position: relative;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
 
 </style>
