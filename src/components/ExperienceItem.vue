@@ -73,7 +73,7 @@ export default {
   min-height: 45px;
   font-size: 1em;
   color: rgba(255, 255, 255, 0.4);
-  margin-bottom: 0.9rem;
+  margin-bottom: 1.4rem;
 }
 
 .collapsed {
@@ -88,7 +88,7 @@ export default {
   width: fit-content;
   font-size: 1em;
   color: #bac96480;
-  margin: -1rem 0 0 auto;
+  margin: -0.5rem 0 0 auto;
   cursor: pointer;
 
   &:hover {

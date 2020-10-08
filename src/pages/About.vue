@@ -18,13 +18,16 @@
       <div class="section-heading">
         <h2>Client <strong>Testimonial</strong></h2>
       </div>
-      <TestimonialCard v-for="item in data.testimonials" :key="item.id" :data="item" />
+      <div class="testimonial-content">
+        <TestimonialCard v-for="item in data.testimonials" :key="item.id" :data="item" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import TestimonialCard from '@/components/TestimonialCard.vue'
+import jsonData from '@/helper/data.js'
 
 export default {
   name: 'About',
@@ -32,24 +35,12 @@ export default {
     TestimonialCard
   },
   data: () => ({
-    data: {
-      summary: `Passionate front-end software developer with 6 years of experience using HTML5/CSS3, Bootstrap, jQuery and Javascript/Typescript to build all aspects of the UX and UI for many kinds of web sites. Specialized in using ReactJS, VueJS, Angular and PHP/Laravel to build many kinds of web platforms and mobile apps.`,
-      testimonials: [
-        {
-          id: 't-1',
-          imgURL: 'quote_author-1.jpeg',
-          quote: `First time we worked together, Mark came up with several on-target creative concepts under significant deadline pressure. he's creative, deliberate in his strategy and focused on results. he knows that online content is king and understands how to pull leads into the pipeline.`,
-          author: 'David Lung',
-          role: 'CEO',
-          company: 'GoGoGrandparent Inc.',
-        }
-      ]
-    }
+    data: jsonData
   })
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .about {
   position: relative;
@@ -57,6 +48,7 @@ export default {
 }
 
 .about-me {
+  align-items: center;
   margin-top: 200px;
 }
 
@@ -93,6 +85,11 @@ export default {
 
   .section-heading {
     margin-bottom: 5rem;
+  }
+
+  &-content {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
