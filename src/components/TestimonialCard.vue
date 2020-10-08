@@ -29,9 +29,11 @@ export default {
 <style lang="scss" scoped>
 
 .content {
-  width: 50%;
+  width: calc(50% - 2rem);
+  height: fit-content;
+  margin: 0 1rem 2rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     width: 100%;
   }
 }
@@ -41,7 +43,9 @@ export default {
 }
 
 .photo-container img {
-  width: 100%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.2);
 }

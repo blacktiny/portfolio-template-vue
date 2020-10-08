@@ -38,7 +38,6 @@ export default {
   box-sizing: border-box;
   animation: zoom-in 0.5s ease-in-out both;
   transform-origin: center;
-  cursor: pointer;
 
   @media (max-width: 1024px) {
     width: 50%;
@@ -57,6 +56,7 @@ export default {
   height: 250px;
   opacity: 0.8;
   overflow: hidden;
+  cursor: pointer;
 
   img {
     width: 100%;
