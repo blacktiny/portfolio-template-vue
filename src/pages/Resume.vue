@@ -1,5 +1,5 @@
 <template>
-  <div class="resume column container">
+  <div id="resume" class="resume column container">
     <div class="section-heading">
       <h2>My <strong>Resume</strong></h2>
     </div>
@@ -17,8 +17,11 @@
         </div>
       </div>
     </div>
-    <div class="row skills-list">
+    <div class="column">
       <h3>Skills</h3>
+      <div class="row skills-list">
+        <SkillItem v-for="item in data.skills" :key="item.id" :data="item" />
+      </div>
     </div>
   </div>
 </template>
@@ -26,13 +29,15 @@
 <script>
 import EducationItem from '@/components/EducationItem.vue'
 import ExperienceItem from '@/components/ExperienceItem.vue'
+import SkillItem from '@/components/SkillItem.vue'
 import jsonData from '@/helper/data.js'
 
 export default {
   name: 'Resume',
   components: {
     EducationItem,
-    ExperienceItem
+    ExperienceItem,
+    SkillItem
   },
   data: () => ({
     data: jsonData

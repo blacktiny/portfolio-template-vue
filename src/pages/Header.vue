@@ -1,11 +1,9 @@
 <template>
   <div class="header" :class="{ active: active }">
     <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Portfolio</li>
-      <li>Resume</li>
-      <li>Contact</li>
+      <li v-for="item in listOfHeaders" :key="item.id">
+        <a :href="item.link" :class="{ active: visibleId === item.id }">{{ item.name }}</a>
+      </li>
     </ul>
   </div>
 </template>
@@ -14,7 +12,35 @@
 export default {
   name: 'Header',
   data: () => ({
-    active: false
+    active: false,
+    visibleId: 'home',
+    listOfHeaders: [
+      {
+        id: 'home',
+        name: 'Home',
+        link: '#home'
+      },
+      {
+        id: 'about',
+        name: 'About',
+        link: '#about'
+      },
+      {
+        id: 'portfolio',
+        name: 'Portfolio',
+        link: '#portfolio'
+      },
+      {
+        id: 'resume',
+        name: 'Resume',
+        link: '#resume'
+      },
+      {
+        id: 'contact',
+        name: 'Contact',
+        link: '#contact'
+      },
+    ]
   }),
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
@@ -29,6 +55,24 @@ export default {
         this.active = true
       } else {
         this.active = false
+      }
+
+      this.checkVisibleIdViewport()
+    },
+    isInViewport (el) {
+      const rect = el.getBoundingClientRect()
+
+      return (
+        rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) / 2
+      )
+    },
+    checkVisibleIdViewport () {
+      for (const header of this.listOfHeaders) {
+        let section = document.querySelector(header.link)
+        if (this.isInViewport(section)) {
+          this.visibleId = header.id
+          break
+        }
       }
     }
   }
@@ -58,8 +102,14 @@ export default {
       cursor: pointer;
       transition: color .3s linear;
 
-      &:hover {
-        color: #00bd7a;
+      a {
+        text-decoration: none;
+        color: #4a4a4a;
+
+        &:hover,
+        &.active {
+          color: #00bd7a;
+        }
       }
     }
   }

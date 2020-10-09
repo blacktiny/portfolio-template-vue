@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div id="home" class="home">
     <div class="container">
       <div class="products">
         <img class="product-img product1" src="@/assets/images/Product1.png" />

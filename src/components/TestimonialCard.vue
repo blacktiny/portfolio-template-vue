@@ -46,6 +46,7 @@ export default {
   width: 50px;
   height: 50px;
   object-fit: cover;
+  margin-top: 15px;
   border-radius: 50%;
   box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.2);
 }
@@ -61,7 +62,7 @@ export default {
 
 .triangle-left {
   position: absolute;
-  top: 30px;
+  top: 40px;
   left: -20px;
   width: 0;
   height: 0;

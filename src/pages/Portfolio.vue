@@ -1,5 +1,5 @@
 <template>
-  <div class="column container portfolio">
+  <div id="portfolio" class="column container portfolio">
     <div class="section-heading">
       <h2>Featured <strong>Portfolio</strong></h2>
     </div>

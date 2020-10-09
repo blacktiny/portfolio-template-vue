@@ -1,5 +1,5 @@
 <template>
-  <div class="column container about">
+  <div id="about" class="column container about">
     <div class="row about-me">
       <div class="photo">
         
