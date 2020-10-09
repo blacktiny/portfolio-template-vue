@@ -46,12 +46,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-h3 {
-  font-size: 1.5em;
-  font-weight: 200;
-  color: #fff;
-  padding-left: 1rem;
+.resume {
+  margin-bottom: 5rem;
 }
 
 .content {

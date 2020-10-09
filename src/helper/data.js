@@ -12,7 +12,7 @@ export default {
     {
       id: 't-2',
       imgURL: 'quote_author-2.png',
-      quote: `Wang is an excellent front-end developer. He is a very creative and passionate and has perfect skills with React/Electron.`,
+      quote: `Wang is an excellent front-end developer. He is very creative and passionate and has perfect skills with React/Electron. He always foused on pixel-perfect and high quality result.`,
       author: 'Adil Virani',
       role: 'Founder',
       company: 'Blitz',
@@ -38,19 +38,42 @@ export default {
       id: "blitz",
       name: "The Blitz Software For Game Coach",
       categories: ["web", "desktop"],
-      imgURL: "Product2.png"
+      imgURL: "Product2.png",
+      images: [
+        "/products/blitz/p-1.jpeg",
+        "/products/blitz/p-2.jpeg",
+        "/products/blitz/p-3.jpeg",
+        "/products/blitz/p-4.jpeg",
+        "/products/blitz/p-5.jpeg",
+        "/products/blitz/p-6.jpeg"
+      ]
     },
     {
       id: "gogo",
       name: "The GoGoGrandparent Dashboard",
       categories: ["web"],
-      imgURL: "Product1.png"
+      imgURL: "Product1.png",
+      images: [
+        "/products/gogo/p-1.png",
+        "/products/gogo/p-2.png",
+        "/products/gogo/p-3.png",
+        "/products/gogo/p-4.png",
+        "/products/gogo/p-5.png",
+        "/products/gogo/p-6.png"
+      ]
     },
     {
       id: "edulastic",
       name: "Interactive Formative Assessment (Education Management)",
       categories: ["web"],
-      imgURL: "Product3.png"
+      imgURL: "Product4.png",
+      images: [
+        "/products/edulastic/p-1.jpeg",
+        "/products/edulastic/p-2.png",
+        "/products/edulastic/p-3.png",
+        "/products/edulastic/p-4.png",
+        "/products/edulastic/p-5.png"
+      ]
     },
     {
       id: "switch",
@@ -187,7 +210,199 @@ export default {
     {
       id: "react",
       name: "React",
-      level: 4
-    }
-  ]
+      level: 4,
+      years: '4'
+    },
+    {
+      id: "reactnative",
+      name: "React Native",
+      level: 4,
+      years: 3
+    },
+    {
+      id: "javascript",
+      name: "Javascript",
+      level: 4,
+      years: 6
+    },
+    {
+      id: "htmlcss",
+      name: "HTML/CSS",
+      level: 4,
+      years: 6
+    },
+    {
+      id: "bootstrap",
+      name: "Bootstrap",
+      level: 4,
+      years: 4
+    },
+    {
+      id: "sass",
+      name: "Sass/Less",
+      level: 4,
+      years: 3
+    },
+    {
+      id: "jquery",
+      name: "jQuery",
+      level: 4,
+      years: 5
+    },
+    {
+      id: "vue",
+      name: "Vue.js",
+      level: 4,
+      years: 3
+    },
+    {
+      id: "typescript",
+      name: "TypeScript",
+      level: 4,
+      years: 3
+    },
+    {
+      id: "redux",
+      name: "Redux",
+      level: 4,
+      years: 3
+    },
+    {
+      id: "node",
+      name: "Node.js",
+      level: 4,
+      years: 3
+    },
+    // {
+    //   id: "express",
+    //   name: "Express.js",
+    //   level: 4,
+    //   years: 3
+    // },
+    {
+      id: "php",
+      name: "PHP",
+      level: 4,
+      years: 5
+    },
+    {
+      id: "laravel",
+      name: "Laravel",
+      level: 4,
+      years: 3
+    },
+    {
+      id: "mysql",
+      name: "MySQL",
+      level: 4,
+      years: 4
+    },
+    // {
+    //   id: "git",
+    //   name: "Git",
+    //   level: 4,
+    //   years: 4
+    // },
+    // {
+    //   id: "nativescript",
+    //   name: "NativeScript",
+    //   level: 3,
+    //   years: 2
+    // },
+    // {
+    //   id: "swift",
+    //   name: "Swift",
+    //   level: 3,
+    //   years: 2
+    // },
+    {
+      id: "angular",
+      name: "Angular",
+      level: 3,
+      years: 3
+    },
+    {
+      id: "python",
+      name: "Python",
+      level: 3,
+      years: 3
+    },
+    // {
+    //   id: "django",
+    //   name: "Django",
+    //   level: 3,
+    //   years: 3
+    // },
+    {
+      id: "mongodb",
+      name: "MongoDB",
+      level: 3,
+      years: 3
+    },
+    // {
+    //   id: "c",
+    //   name: "C/C++",
+    //   level: 2,
+    //   years: 4
+    // },
+    {
+      id: "java",
+      name: "Java",
+      level: 2,
+      years: 3
+    },
+    // {
+    //   id: "rails",
+    //   name: "Rails",
+    //   level: 2,
+    //   years: 2
+    // },
+    {
+      id: "ror",
+      name: "Ruby on Rails",
+      level: 2,
+      years: 2
+    },
+    // {
+    //   id: "nosql",
+    //   name: "NoSQL",
+    //   level: 2,
+    //   years: 1
+    // },
+    // {
+    //   id: "postgresql",
+    //   name: "PostgreSQL",
+    //   level: 2,
+    //   years: 1
+    // },
+    // {
+    //   id: "docker",
+    //   name: "Docker",
+    //   level: 2,
+    //   years: 2
+    // },
+    // {
+    //   id: "jenkins",
+    //   name: "Jenkins",
+    //   level: 2,
+    //   years: 1
+    // },
+    // {
+    //   id: "asp",
+    //   name: "ASP.NET",
+    //   level: 1,
+    //   years: 1
+    // },
+    // {
+    //   id: "c#",
+    //   name: "C#",
+    //   level: 1,
+    //   years: 1
+    // }
+  ],
+  contact: {
+    email: 'wang.shuang999@hotmail.com',
+    phone: '+86 415910006',
+    address: 'Dalian, Liaoning, China, 110621'
+  }
 }

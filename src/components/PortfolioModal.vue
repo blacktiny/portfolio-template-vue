@@ -5,7 +5,7 @@
         <img src="@/assets/images/icons/right-arrow.png" alt="prev" />
       </div>
       <div class="img-container">
-        <img :src="require(`@/assets/images/${data.imgURL}`)" alt="portfolio" />
+        <img :src="require(`@/assets/images${data.images[curImgIndex]}`)" alt="portfolio" />
       </div>
       <div class="btn next-btn" v-on:click="onNext">
         <img src="@/assets/images/icons/right-arrow.png" alt="next" />
@@ -22,6 +22,7 @@ export default {
   name: 'PortfolioModal',
   props: ['data'],
   data: () => ({
+    curImgIndex: 0
   }),
   methods: {
     onClose () {
@@ -29,34 +30,19 @@ export default {
     },
     onPrev () {
       this.$emit('prev-portfolio')
+      this.curImgIndex --
+      if (this.curImgIndex === -1) this.curImgIndex = this.data.images.length - 1
     },
     onNext () {
       this.$emit('next-portfolio')
+      this.curImgIndex ++
+      if (this.curImgIndex === this.data.images.length) this.curImgIndex = 0
     }
   }
 }
 </script>
 
-<style lang="scss">
-
-.portfolio-item {
-  width: 30%;
-  margin: 0 1rem 2rem;
-  box-sizing: border-box;
-  animation: zoom-in 0.5s ease-in-out both;
-  transform-origin: center;
-  cursor: pointer;
-
-  @media (max-width: 1024px) {
-    width: 50%;
-    padding: 0 1rem 1rem;
-    margin: 0;
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-}
+<style lang="scss" scoped>
 
 .img-container {
   width: 100%;
